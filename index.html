@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBR-2050: Thermodynamic Sovereign System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            --color-primary: #050A30;
+            --color-secondary: #003153;
+            --color-accent: #4169E1;
+            --color-highlight: #96DED1;
+            --color-text-light: #F5F5F5;
+            --color-text-dark: #050A30;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+
+        .card {
+            background-color: var(--color-secondary);
+            border: 1px solid var(--color-accent);
+        }
+
+        .kpi-card {
+            background-color: var(--color-secondary);
+            border: 1px solid var(--color-highlight);
+            transition: all 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(150, 222, 209, 0.2);
+        }
+
+        .flow-node {
+            background-color: var(--color-primary);
+            border: 1px solid var(--color-accent);
+            color: var(--color-text-light);
+        }
+
+        .flow-node-tier1 {
+            background-color: var(--color-primary);
+            border: 1px solid var(--color-highlight);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="w-full p-6 md:p-10 bg-gradient-to-r from-[--color-primary] to-[--color-secondary]">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-bold text-[--color-highlight]">TBR-2050</h1>
+            <h2 class="text-xl md:text-3xl font-semibold text-white mt-2">The Thermodynamic Sovereign System</h2>
+            <p class="text-lg text-gray-300 mt-4">A National Framework for Russia’s Bioeconomy 2035–2050</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8 space-y-12">
+
+        <section id="imperative" class="text-center">
+            <h3 class="text-2xl font-semibold text-[--color-highlight] mb-4">The Strategic Imperative</h3>
+            <p class="text-lg max-w-4xl mx-auto leading-relaxed">
+                The management of the Arctic-Siberian macro-region presents a challenge of immense complexity, characterized by extreme environmental dynamics and vast, unmonitored territories. Conventional deterministic computing (GPU/CPU) is fundamentally ill-suited for this task, demanding unsustainable energy expenditures. TBR-2050 proposes a paradigm shift to Thermodynamic Intelligence, leveraging physics-based processors (TSUs) to harness natural randomness for probabilistic modeling, enabling sovereign, energy-efficient ecological mastery.
+            </p>
+        </section>
+
+        <section id="energy" class="rounded-lg shadow-lg p-6 md:p-8 card">
+            <h3 class="text-2xl font-semibold text-center text-[--color-highlight] mb-4">The Energy Paradigm Shift</h3>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-6">
+                The exponential energy consumption of conventional AI infrastructure is a direct threat to scalable, sovereign computation. Thermodynamic Sampling Units (TSUs) offer a transformative alternative, projecting orders-of-magnitude improvements in energy efficiency by treating thermal noise as a computational resource, not an error to be suppressed.
+            </p>
+            <div class="chart-container">
+                <canvas id="energyChart"></canvas>
+            </div>
+        </section>
+
+        <section id="kryonis" class="space-y-6">
+            <h3 class="text-2xl font-semibold text-center text-[--color-highlight] mb-4">The KRYONIS Axioms</h3>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-6">
+                The entire sovereign framework is guided by the three core axioms of KRYONIS, which shift national planning from deterministic control to probabilistic stewardship.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-lg shadow-md p-6 kpi-card">
+                    <h4 class="text-xl font-bold text-center text-white mb-3">1. Resonance</h4>
+                    <p class="text-gray-200">
+                        The system must resonate with the natural frequencies of the environment. TSU nodes are calibrated to the thermodynamic signatures of the bio-economy (e.g., permafrost thaw, microbial blooms), ensuring computation is aligned with physical reality.
+                    </p>
+                </div>
+                <div class="rounded-lg shadow-md p-6 kpi-card">
+                    <h4 class="text-xl font-bold text-center text-white mb-3">2. Coherence</h4>
+                    <p class="text-gray-200">
+                        Data from disparate, chaotic sources must be fused into a coherent strategic model. The grid establishes a unified probabilistic understanding from Tier 1 (edge) to Tier 4 (national strategy), ensuring all actions are based on a holistic view.
+                    </p>
+                </div>
+                <div class="rounded-lg shadow-md p-6 kpi-card">
+                    <h4 class="text-xl font-bold text-center text-white mb-3">3. Entropy</h4>
+                    <p class="text-gray-200">
+                        Uncertainty (entropy) is embraced as a strategic resource. The framework uses thermodynamic sampling to explore potential futures and identify high-leverage interventions, transforming risk from a liability into a computable advantage.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="rounded-lg shadow-lg p-6 md:p-8 card">
+            <h3 class="text-2xl font-semibold text-center text-[--color-highlight] mb-4">Thermodynamic Sovereign Grid (TSG)</h3>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-8">
+                The TSG is a four-tiered, hybrid computational architecture integrating national governance with decentralized, bio-coherent management. This structure ensures data flows from localized physical phenomena to strategic national analysis.
+            </p>
+            <div class="w-full overflow-x-auto p-4">
+                <div class="flex flex-col items-center space-y-4">
+                    <div class="p-4 rounded-lg shadow-xl flow-node w-full md:w-1/2 text-center">
+                        <h5 class="text-lg font-bold">Tier 4: National Governance</h5>
+                        <p class="text-sm text-gray-300">Kurchatov Institute & National Thermodynamic Center</p>
+                        <p class="text-xs mt-2">Role: Strategic analysis, foundational model updates, national policy.</p>
+                    </div>
+                    
+                    <div class="text-3xl text-[--color-highlight]">&darr;</div>
+                    
+                    <div class="p-4 rounded-lg shadow-xl flow-node w-full md:w-3/4 text-center">
+                        <h5 class="text-lg font-bold">Tier 3: Regional Clusters (NTC)</h5>
+                        <p class="text-sm text-gray-300">Hybrid GPU + TSU Supercomputers</p>
+                        <p class="text-xs mt-2">Role: Aggregate regional models, tactical guidance, anomaly detection.</p>
+                    </div>
+
+                    <div class="text-3xl text-[--color-highlight]">&darr;</div>
+
+                    <div class="w-full text-center">
+                        <h5 class="text-lg font-bold mb-2">Tier 2: TSU Aggregators</h5>
+                        <p class="text-sm text-gray-300 mb-4">Distributed regional compute hubs</p>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <div class="p-3 rounded-lg shadow-lg flow-node-tier1 w-40">
+                                <p class="font-semibold">Arctic Cluster (Murmansk)</p>
+                            </div>
+                            <div class="p-3 rounded-lg shadow-lg flow-node-tier1 w-40">
+                                <p class="font-semibold">Siberian Cluster (Yakutsk)</p>
+                            </div>
+                            <div class="p-3 rounded-lg shadow-lg flow-node-tier1 w-40">
+                                <p class="font-semibold">Far East Cluster (Vladivostok)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-3xl text-[--color-highlight]">&darr;</div>
+                    
+                    <div class="w-full text-center">
+                        <h5 class="text-lg font-bold mb-2">Tier 1: Natural Resonance Units (NRUs)</h5>
+                        <p class="text-sm text-gray-300 mb-4">Hardened TSU-based edge sensors</p>
+                        <p class="text-xs mt-2">Role: Real-time sampling of bio-physical data (permafrost, microbes, C02).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pas" class="rounded-lg shadow-lg p-6 md:p-8 card">
+            <h3 class="text-2xl font-semibold text-center text-[--color-highlight] mb-4">Proof-of-Alignment (PAS) Protocol</h3>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-8">
+                To secure the TSG, a new thermodynamic security protocol is required. The PAS Handshake validates a device's physical integrity by verifying its unique thermodynamic signature, making it resistant to digital spoofing and quantum-level attacks.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="p-4 rounded-lg flow-node">
+                    <h5 class="text-lg font-bold text-center text-white">Authority (Verifier)</h5>
+                </div>
+                <div class="p-4 rounded-lg flow-node">
+                    <h5 class="text-lg font-bold text-center text-white">Device (Tier 1 TSU)</h5>
+                </div>
+            </div>
+            <div class="mt-6 space-y-4">
+                <div class="flex items-center">
+                    <span class="p-3 rounded-lg flow-node-tier1 w-full text-center">1. Authority sends Computational Challenge (Sampling Task C)</span>
+                    <span class="text-3xl text-[--color-accent] mx-4">&rarr;</span>
+                    <span class="w-full"></span>
+                </div>
+                <div class="flex items-center">
+                    <span class="w-full"></span>
+                    <span class="text-3xl text-[--color-accent] mx-4">&larr;</span>
+                    <span class="p-3 rounded-lg flow-node-tier1 w-full text-center">2. Device executes C; unique TSU physics (PUF) generates Result (R)</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="p-3 rounded-lg flow-node-tier1 w-full text-center">3. Authority verifies R against expected thermodynamic profile (Proof-of-Alignment)</span>
+                    <span class="text-3xl text-[--color-accent] mx-4">&rarr;</span>
+                    <span class="w-full"></span>
+                </div>
+                <div class="flex items-center">
+                    <span class="w-full"></span>
+                    <span class="text-3xl text-[--color-accent] mx-4">&larr;</span>
+                    <span class="p-3 rounded-lg bg-[--color-highlight] text-text-dark w-full text-center font-semibold">4. Authentication Granted / Trust Established</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="rounded-lg shadow-lg p-6 md:p-8 card">
+            <h3 class="text-2xl font-semibold text-center text-[--color-highlight] mb-8">Implementation Roadmap 2026–2050</h3>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-10">
+                A phased implementation ensures systematic integration, from foundational research and prototyping to full-scale sovereign deployment across the Arctic-Siberian macro-region.
+            </p>
+            <div class="relative max-w-2xl mx-auto">
+                <div class="absolute left-1/2 w-1 h-full bg-[--color-accent] -translate-x-1/2"></div>
+                
+                <div class="relative mb-10">
+                    <div class="absolute left-1/2 w-4 h-4 rounded-full bg-[--color-highlight] -translate-x-1/2 mt-1 z-10"></div>
+                    <div class="w-full flex justify-start">
+                        <div class="w-5/12 pr-4 text-right">
+                            <h5 class="font-bold text-xl text-white">Phase 1 (2026–2030)</h5>
+                            <p class="text-gray-300">Foundation & Prototyping: Establish NTC. Develop PAS 1.0. Deploy first TSU prototypes (Arctic Symbiome) for permafrost monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative mb-10">
+                    <div class="absolute left-1/2 w-4 h-4 rounded-full bg-[--color-highlight] -translate-x-1/2 mt-1 z-10"></div>
+                    <div class="w-full flex justify-end">
+                        <div class="w-5/12 pl-4 text-left">
+                            <h5 class="font-bold text-xl text-white">Phase 2 (2031–2035)</h5>
+                            <p class="text-gray-300">Integration & Scaling: Build regional TSU Clusters. Integrate TSG with Northern Sea Route logistics. Achieve 50% reduction in ecological modeling energy costs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative mb-10">
+                    <div class="absolute left-1/2 w-4 h-4 rounded-full bg-[--color-highlight] -translate-x-1/2 mt-1 z-10"></div>
+                    <div class="w-full flex justify-start">
+                        <div class="w-5/12 pr-4 text-right">
+                            <h5 class="font-bold text-xl text-white">Phase 3 (2036–2040)</h5>
+                            <p class="text-gray-300">Optimization & Sovereignty: Full-scale Tier 1 NRU deployment. PAS 2.0 secures all critical bioeconomy infrastructure. Domestic yield from bio-assets increases by 200%.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute left-1/2 w-4 h-4 rounded-full bg-[--color-highlight] -translate-x-1/2 mt-1 z-10"></div>
+                    <div class="w-full flex justify-end">
+                        <div class="w-5/12 pl-4 text-left">
+                            <h5 class="font-bold text-xl text-white">Phase 4 (2041–2050)</h5>
+                            <p class="text-gray-300">Thermodynamic Sovereignty: TSG achieves full bio-coherent management. Russia emerges as a global standard-setter in sustainable, probabilistic governance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kpis" class="space-y-6">
+            <h3 class="text-2xl font-semibold text-center text-[--color-highlight] mb-4">Application & Key Performance Indicators</h3>
+            <p class="text-center text-lg max-w-3xl mx-auto mb-6">
+                The primary application is the real-time management of the Arctic Symbiome, enabling probabilistic risk assessment. This drives progress toward the overarching national KPIs for 2050, measured by the TSG framework.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="rounded-lg shadow-lg p-6 card">
+                    <h4 class="text-xl font-semibold text-center text-white mb-6">Case Study: Arctic Symbiome Risk Analysis</h4>
+                    <p class="text-center text-sm text-gray-300 mb-4">Probabilistic weighting of key ecological destabilization factors as modeled by Tier 2 TSU Clusters.</p>
+                    <div class="chart-container" style="height: 300px; max-height: 350px;">
+                        <canvas id="arcticChart"></canvas>
+                    </div>
+                </div>
+                <div class="rounded-lg shadow-lg p-6 card">
+                    <h4 class="text-xl font-semibold text-center text-white mb-6">2050 National Sovereignty KPIs</h4>
+                    <p class="text-center text-sm text-gray-300 mb-4">Targeted outcomes for the Thermodynamic Sovereign System, demonstrating multi-domain mastery.</p>
+                    <div class="chart-container" style="height: 300px; max-height: 350px;">
+                        <canvas id="kpiChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-8 mt-12 border-t border-[--color-secondary]">
+        <p class="text-gray-400">&copy; 2025 National Thermodynamic Center. This document is for strategic planning purposes.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+
+            const chartBaseOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'var(--color-text-light)'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            color: 'var(--color-text-light)'
+                        },
+                        grid: {
+                            color: 'rgba(245, 245, 245, 0.1)'
+                        }
+                    },
+                    y: {
+                        ticks: {
+                            color: 'var(--color-text-light)'
+                        },
+                        grid: {
+                            color: 'rgba(245, 245, 245, 0.1)'
+                        }
+                    }
+                }
+            };
+
+            const chartRaderOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'var(--color-text-light)'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(245, 245, 245, 0.2)'
+                        },
+                        grid: {
+                            color: 'rgba(245, 245, 245, 0.2)'
+                        },
+                        pointLabels: {
+                            color: 'var(--color-text-light)',
+                            font: {
+                                size: 12
+                            }
+                        },
+                        ticks: {
+                            color: 'var(--color-text-light)',
+                            backdropColor: 'var(--color-secondary)'
+                        }
+                    }
+                }
+            };
+
+            if (document.getElementById('energyChart')) {
+                const ctx = document.getElementById('energyChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2025', '2030', '2035', '2040', '2045', '2050'],
+                        datasets: [
+                            {
+                                label: 'Conventional AI (GPU) Energy (TWh)',
+                                data: [10, 80, 250, 700, 1500, 3000],
+                                borderColor: 'var(--color-accent)',
+                                backgroundColor: 'rgba(65, 105, 225, 0.2)',
+                                fill: true,
+                                tension: 0.3
+                            },
+                            {
+                                label: 'Thermodynamic (TSU) Energy (TWh)',
+                                data: [1, 2, 4, 8, 12, 16],
+                                borderColor: 'var(--color-highlight)',
+                                backgroundColor: 'rgba(150, 222, 209, 0.2)',
+                                fill: true,
+                                tension: 0.3
+                            }
+                        ]
+                    },
+                    options: {
+                        ...chartBaseOptions,
+                        scales: {
+                            x: { ...chartBaseOptions.scales.x, title: { display: true, text: 'Year', color: 'var(--color-text-light)' } },
+                            y: { ...chartBaseOptions.scales.y, type: 'logarithmic', title: { display: true, text: 'Projected Energy Consumption (TWh)', color: 'var(--color-text-light)' } }
+                        }
+                    }
+                });
+            }
+
+            if (document.getElementById('arcticChart')) {
+                const ctx = document.getElementById('arcticChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Permafrost Thaw', 'Methane Release Risk', 'Biodiversity Loss', 'Infrastructure Risk'],
+                        datasets: [{
+                            label: 'Risk Contribution',
+                            data: [40, 30, 20, 10],
+                            backgroundColor: [
+                                'var(--color-accent)',
+                                'var(--color-highlight)',
+                                'rgba(65, 105, 225, 0.5)',
+                                'rgba(150, 222, 209, 0.5)'
+                            ],
+                            borderColor: 'var(--color-secondary)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: 'var(--color-text-light)'
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            if (document.getElementById('kpiChart')) {
+                const ctx = document.getElementById('kpiChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: [['Energy', 'Efficiency'], ['Data', 'Sovereignty'], ['CO2 Reduction'], ['Domestic', 'Bio-Yield'], 'Resilience'],
+                        datasets: [{
+                            label: '2050 Target (% Max)',
+                            data: [95, 100, 90, 85, 95],
+                            backgroundColor: 'rgba(65, 105, 225, 0.2)',
+                            borderColor: 'var(--color-accent)',
+                            pointBackgroundColor: 'var(--color-accent)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'var(--color-accent)'
+                        },
+                        {
+                            label: '2030 Baseline (% Max)',
+                            data: [20, 30, 15, 25, 40],
+                            backgroundColor: 'rgba(150, 222, 209, 0.2)',
+                            borderColor: 'var(--color-highlight)',
+                            pointBackgroundColor: 'var(--color-highlight)',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: 'var(--color-highlight)'
+                        }]
+                    },
+                    options: chartRaderOptions
+                });
+            }
+
+        });
+    </script>
+
+</body>
+</html>
